@@ -1,0 +1,95 @@
+<!-- 博客 -->
+<section class="c-blog cover-page {{themes.themeClass}}">
+    <div class="header">
+        <progress-tool class="top-progress" percent="percent"></progress-tool>
+        <div class="header-background bg-enter"></div>
+        <div class="header-background bg-leave"></div>
+        <div class="container" scroll-fade>
+            <h1 change-font>JailBreak</h1>
+            <p class="sub-title">飞翔在追寻理想的道路上</p>
+        </div>
+        <div class="container_fuild">
+            <div class="theme-type">
+                <p>
+                    主题： 
+                    <theme-switcher themes="themes"> 
+                        <switcher ng-repeat="theme in themes" tm="theme"></switcher>
+                    </theme-switcher>
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="type-ct">
+                    <div class="type-head">
+                        <h2>文章分类</h2>
+                        <p>Article Categories</p>
+                    </div>
+                    <ul class="types" >
+                        <li class="{{'all' == blogtype? 'active':''}}">
+                            <a  ng-href="#/blog/all">ALL</a>
+                        </li>
+                        <li class="{{type == blogtype? 'active':''}}" ng-repeat="type in listType">
+                            <a  ng-href="#/blog/{{type}}" ng-bind="type"></a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div style="position: relative; min-height: 600px;" class="col-sm-9">
+                <div class="blog-ct" ui-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3>友情链接</h3>
+            <ul class="clearfix col-sm-6">
+                <li><a href="http://mux.alimama.com/" target="_blank">阿里妈妈UED</a> </li>           
+                <li><a href="http://thx.github.io/" target="_blank">THX</a> </li>
+                <li><a href="http://purplebamboo.github.io/" target="_blank">purplebamboo</a> </li>
+                <li><a href="http://www.hi-hi.cn/" target="_blank">e纯的博客</a> </li>  
+                <li><a href="http://fw36.com/" target="_blank">FW36</a></li> 
+                <li><a href="http://fengzixu.net/" target="_blank">心术</a> </li>
+                <li><a href="http://huanyueyaoqin.com/" target="_blank">幻月瑶琴</a> </li>       
+                <li><a href="http://qious.cn/" target="_blank">邱俊的博客</a> </li>
+                <li><a href="http://limu.iteye.com/" target="_blank">limu的砖篮儿</a> </li>
+                <li><a href="http://home.kwang520.com/" target="_blank">kavinwang</a> </li>
+                <li><a href="http://www.star404.com/" target="_blank">星光尽头</a> </li>
+                <li><a href="http://vyee.sinaapp.com/" target="_blank">YS</a> </li>
+                <li><a href="http://5.vgee.sinaapp.com" target="_blank">blog 1.0</a> </li>            
+                <li><a href="http://vgee.sinaapp.com" target="_blank">blog 2.0</a> </li>            
+            </ul>
+            <div class="contact col-sm-offset-3 col-sm-3">
+                <p>
+                    <a href="http://weibo.com/jailbreakc" target="_blank"><em class="iconfont">&#xe603;</em> 微博</a>
+                </p>
+                <p>
+                    <a href="tencent://message/?uin=610164407&Menu=yes" target="_blank"><em class="iconfont">&#xe600;</em> QQ</a>
+                </p>
+                <p>
+                    <a href="http://www.zhihu.com/people/JailBreak" target="_blank"><em class="iconfont">&#xe606;</em> 知乎</a>
+                </p>
+                <p>
+                    <a href="https://github.com/JailBreakC" target="_blank"><em class="iconfont">&#xe607;</em> GitHub</a>
+                </p>
+                <p>
+                    <a href="javascript:;"><em class="iconfont">&#xe604;</em> admin@vgee.cn</a>
+                </p>
+            </div>    
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="copyright container">
+            <p><a href="http://www.qiniu.com"><img height="25px" src="/img/logo_qiniu.png"></a> 提供cdn加速 
+            <a href="http://gitcafe.com"><img height="25px" src="/img/gitcafe.png"></a> 提供托管服务 </p>
+            <p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源</p>
+        </div>
+    </div>
+</footer>
